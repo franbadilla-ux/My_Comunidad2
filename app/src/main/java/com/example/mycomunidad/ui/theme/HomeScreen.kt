@@ -316,9 +316,18 @@ fun HomeScreen(
 
                     onClick = {
 
-                        /* accion futura */
+                        vm.submit{ user ->
+                            navController.navigate("muestraDatos/$user")
+                            {//inicia navegacion
+                                popUpTo("login"){inclusive = true} // no volver al login con el back
+                                launchSingleTop
 
-                    }
+                            }//fin inicia navegacion
+                        }// fin submit
+
+                    }, //fin oclock
+                    enabled = !state.isLoading,
+                    modifier = Modifier.fillMaxWidth(0.6f)
 
                 ) {
 
