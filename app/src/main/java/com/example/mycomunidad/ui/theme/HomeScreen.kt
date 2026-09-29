@@ -302,7 +302,15 @@ fun HomeScreen(
 
                     modifier =
                         Modifier.fillMaxWidth(0.95f)
-                )
+                )// fin pass
+                if(state.error != null){
+                    Spacer(Modifier.height(9.dp))
+                    Text(
+                        text = state.error ?: "",
+                        color = MaterialTheme.colorScheme.primary,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
 
 
                 Spacer(
