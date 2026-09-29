@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.mycomunidad.ui.home.MuestraDatosScreen
 import com.example.mycomunidad.ui.theme.HomeScreen
 
 @Composable
@@ -25,7 +26,13 @@ fun AppNav(){
                 }
             )
         )//fin composable 2
-        {}
+        {//inicio back
+            backStackEntry ->
+            val username = backStackEntry.arguments?.getString("username").orEmpty()
+
+            MuestraDatosScreen(username = username, navController = navController)
+
+        }
 
 
     }//fin NavHost

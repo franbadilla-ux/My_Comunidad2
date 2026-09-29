@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.rememberNavController
+import com.example.mycomunidad.navigation.AppNav
 import com.example.mycomunidad.ui.theme.HomeScreen
 import com.example.mycomunidad.ui.theme.MyComunidadTheme
 
@@ -17,20 +18,13 @@ class MainActivity : ComponentActivity() {
 
         super.onCreate(savedInstanceState)
 
-        enableEdgeToEdge()
+
 
 
         setContent {
 
-            MyComunidadTheme {
+            AppNav()
 
-                val navController =
-                    rememberNavController()
-
-
-                HomeScreen(
-                    navController = navController
-                )
 
             }
 
@@ -38,4 +32,3 @@ class MainActivity : ComponentActivity() {
 
     }
 
-}
