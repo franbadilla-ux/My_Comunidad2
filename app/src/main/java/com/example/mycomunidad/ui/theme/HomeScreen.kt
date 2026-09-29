@@ -331,10 +331,11 @@ fun HomeScreen(
 
                 ) {
 
-                    Text(
+                    /*Text(
                         text = "Presioname"
-                    )
-                }
+                    )*/
+                    Text(if(state.isLoading)"Validando" else "Inicio sesion")
+                }//fin boton
 
             }// fin contenido
 
