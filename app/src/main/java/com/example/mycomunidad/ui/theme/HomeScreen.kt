@@ -174,7 +174,7 @@ fun HomeScreen(
 
                     Text(
 
-                        text = "texto uno",
+                        text = "Identificador",
 
                         style =
                             MaterialTheme.typography.bodyLarge.copy(
@@ -195,7 +195,7 @@ fun HomeScreen(
 
                     Text(
 
-                        text = "texto dos",
+                        text = "Ten un pyro",
 
                         style =
                             MaterialTheme.typography.bodyLarge.copy(
