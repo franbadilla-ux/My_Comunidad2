@@ -79,7 +79,15 @@ fun ProductoFormScreen(
                 label = {Text("Cantidad")},
                 modifier = Modifier.fillMaxWidth()
 
-            )//Fin OutlinedTextfile
+            )//Fin OutlinedTextfile cantidad
+
+            OutlinedTextField(
+                value = direccion,
+                onValueChange = {direccion = it},
+                label = {Text("direccion")},
+                modifier = Modifier.fillMaxWidth()
+
+            )//Fin OutlinedTextfile direccion
 
         }//fin inicio contenido
 
