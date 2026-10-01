@@ -8,6 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.mycomunidad.ui.home.MuestraDatosScreen
 import com.example.mycomunidad.ui.theme.HomeScreen
+import com.example.mycomunidad.view.DrawerMenu
 
 @Composable
 fun AppNav(){
@@ -19,7 +20,8 @@ fun AppNav(){
         }//fin composable 1
 
         composable(
-            route = "muestraDatos/{username}",
+           // route = "muestraDatos/{username}",
+            route = "DrawerMenu/{username}",
             arguments = listOf(
                 navArgument("username"){
                     type = NavType.StringType
@@ -30,7 +32,8 @@ fun AppNav(){
             backStackEntry ->
             val username = backStackEntry.arguments?.getString("username").orEmpty()
 
-            MuestraDatosScreen(username = username, navController = navController)
+           // MuestraDatosScreen(username = username, navController = navController)
+            DrawerMenu(username = username, navController = navController)
 
         }
 

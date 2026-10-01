@@ -92,7 +92,7 @@ fun DrawerMenu(
                     val nombre = Uri.encode("Navegador")
                         val numero = "5000"
 
-                        navController.navigate("SampleText/$nombre/$numero")
+                        navController.navigate("Navegador/$nombre/$numero")
 
                     },
                     icon = {Icon(Icons.Default.LocalFireDepartment, contentDescription= "Buscar")}
